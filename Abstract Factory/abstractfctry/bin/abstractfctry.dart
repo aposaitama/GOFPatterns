@@ -1,10 +1,10 @@
-// Абстрактная фабрика
+//абстрактний інтерфейс для обєктів.
 abstract class CarFactory {
   Car createCar();
   Specification createSpecification();
 }
 
-// Абстрактные продукты
+//абстрактні продукти
 abstract class Car {
   void createCar();
 }
@@ -13,7 +13,7 @@ abstract class Specification {
   void createSpecification();
 }
 
-// Конкретные продукты для Северной Америки
+//конкретні продукти для НА
 class NorthAmericaCar implements Car {
   @override
   void createCar() {
@@ -28,7 +28,7 @@ class NorthAmericaSpecification implements Specification {
   }
 }
 
-// Конкретные продукты для Европы
+//конкретні продукти для Європи
 class EuropeCar implements Car {
   @override
   void createCar() {
@@ -43,7 +43,7 @@ class EuropeSpecification implements Specification {
   }
 }
 
-// Конкретная фабрика для Северной Америки
+//Конкретна фабрика для НА
 class NorthAmericaCarFactory implements CarFactory {
   @override
   Car createCar() {
@@ -56,7 +56,7 @@ class NorthAmericaCarFactory implements CarFactory {
   }
 }
 
-// Конкретная фабрика для Европы
+//конкретна фабрика для Європи
 class EuropeCarFactory implements CarFactory {
   @override
   Car createCar() {
