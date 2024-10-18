@@ -93,17 +93,17 @@ class Director {
 void main() {
   final director = Director();
 
-  // Побудова спортивного автомобіля
+  
   final sportsCarBuilder = SportsCarBuilder();
   director.setBuilder(sportsCarBuilder);
   final sportsCar = director.buildCar();
   sportsCar.showDetails();
-  // Виведе: Car with engine: V8 Engine, body: Sports Body, doors: 2
+  
 
-  // Побудова позашляховика
+  
   final wagonCarBuilder = WagonCarBuilder();
   director.setBuilder(wagonCarBuilder);
   final suvCar = director.buildCar();
   suvCar.showDetails();
-  // Виведе: Car with engine: V6 Engine, body: SUV Body, doors: 4
+  
 }
