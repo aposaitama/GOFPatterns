@@ -81,12 +81,9 @@ class CreateCar {
 }
 
 void main() {
-  // Используем фабрику для Северной Америки
   CarFactory factory = NorthAmericaCarFactory();
   CreateCar app = CreateCar(factory);
   app.createUI();
-
-  // Используем фабрику для Европы
   factory = EuropeCarFactory();
   app = CreateCar(factory);
   app.createUI();
