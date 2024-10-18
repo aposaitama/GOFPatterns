@@ -1,10 +1,8 @@
-//абстрактний інтерфейс для обєктів.
 abstract class CarFactory {
   Car createCar();
   Specification createSpecification();
 }
 
-//абстрактні продукти
 abstract class Car {
   void createCar();
 }
@@ -13,7 +11,6 @@ abstract class Specification {
   void createSpecification();
 }
 
-//конкретні продукти для НА
 class NorthAmericaCar implements Car {
   @override
   void createCar() {
@@ -69,11 +66,10 @@ class EuropeCarFactory implements CarFactory {
   }
 }
 
-// Класс Application, который использует абстрактную фабрику
-class Application {
+class CreateCar {
   final CarFactory factory;
 
-  Application(this.factory);
+  CreateCar(this.factory);
 
   void createUI() {
     Car car = factory.createCar();
@@ -87,11 +83,11 @@ class Application {
 void main() {
   // Используем фабрику для Северной Америки
   CarFactory factory = NorthAmericaCarFactory();
-  Application app = Application(factory);
+  CreateCar app = CreateCar(factory);
   app.createUI();
 
   // Используем фабрику для Европы
   factory = EuropeCarFactory();
-  app = Application(factory);
+  app = CreateCar(factory);
   app.createUI();
 }
